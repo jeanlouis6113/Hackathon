@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { Route, Switch, } from 'react-router-dom';
 import PageDepartement from './components/PageDepartement';
-import PageHome from './components/PageHome';
 import PageOeuvreArm from './components/PageOeuvreArm';
 import PageOeuvreAsia from './components/PageOeuvreAsia';
 import PageOeuvrePainting from './components/PageOeuvrePainting';
@@ -13,8 +12,7 @@ function App() {
     return (
       <div>
         <Switch>
-          <Route exact path="/" component={PageHome}/>
-          <Route exact path="/PageDepartement" component={PageDepartement} />
+          <Route exact path="/" component={PageDepartement}/>
           <Route exact path="/PageOeuvreArms" component={PageOeuvreArm} />
           <Route exact path="/PageOeuvreAsia" component={PageOeuvreAsia} />
           <Route exact path="/PageOeuvrePainting" component={PageOeuvrePainting} />
