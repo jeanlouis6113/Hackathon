@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.startPage {
+    background-image: url("https://www.apanl.com/wp-content/uploads/2019/03/voyage-5-1200x580.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.departement {
+    
+    height: 80vh;
+}
+
+.departementArms {
+    background-image: url('./imagesSrc/enteteArms.png');
+    background-position: bottom;
+}
+
+.departementAsia {
+    background-image: url('./imagesSrc/enteteAsian.jpg');
+    background-position: bottom 10px left 840px;
+}
+
+.departementEuro {
+    background-image: url('./imagesSrc/enteteEuropeen.jpg');
+    background-position: center;
+}
+.departementInst {
+    background-image: url('./imagesSrc/enteteInstrument.jpg');
+    background-position: bottom;
 }
