@@ -3,11 +3,28 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+@font-face {
+  font-family: TheFontGatsby;
+  src: url(./Font/ParkLaneNF.ttf) format('truetype');
+}
 
 h2 {
   text-align: center;
 }
-
+.align {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+h1 {
+  font-family: "TheFontGatsby";
+  text-align: center;
+  font-size: 7rem !important;
+}
+.title {
+  font-size: 1.6rem;
+}
 .departement {
   color: white;
   text-align: center;
@@ -56,30 +73,29 @@ h2 {
 
 /*Début bubble Codepen*/
 .speech-bubble {
-	position: relative;
-	background: white;
-    border-radius:1em;
-    padding-bottom: 10px;
-    padding-top: 10px;
+  position: relative;
+  background: white;
+  border-radius: 1em;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .speech-bubble:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 20px solid transparent;
-	border-top-color: white;
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -10px;
-	margin-bottom: -20px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: white;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-bottom: -20px;
 }
 
 /*Fin bubble Codepen*/
-
 
 .border-green {
   border-style: solid;
@@ -99,6 +115,31 @@ h2 {
 .border-orange {
   border-style: solid;
   border-color: red;
+}
+audio {
+  margin: 10px;
+  height: 20px;
+  display: none;
+}
+#settingsIcon {
+  width: 3vh;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.foote {
+  background-color: white;
+  widows: 100%;
+}
+.icone {
+  width: 6vh;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.copie{
+  float: right;
+  width: 10vh;
+  margin-top: 5px;
+  margin-right: 15px;
 }
 
 @media only screen and (max-width: 400px) {
