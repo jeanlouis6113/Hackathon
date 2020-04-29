@@ -15,7 +15,7 @@ export class PageDepartement extends React.Component {
                         <Logo />
                     </Col>
                     <Col item xs={1}>
-                        <ButtonSettings />
+                        <ButtonSettings />t t
                     </Col>
                 </Row>
                 <h1>TrAvel Art</h1>
