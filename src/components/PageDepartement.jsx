@@ -14,28 +14,28 @@ export class PageDepartement extends React.Component {
                     <Col xs="12" lg="3">
                         <Link to="/PageOeuvreArms">
                             <div className="departement departementArms">
-                                Departement Arms
+                                <h3>Departement Arms</h3>                                
                             </div>
                         </Link>
                     </Col>
                     <Col xs="12" lg="3">
                         <Link to="/PageOeuvreAsia">
                             <div className="departement departementAsia">
-                                Departement Asia
+                                <h3>Departement Asia</h3>
                             </div>
                         </Link>
                     </Col>
                     <Col xs="12" lg="3">
                         <Link to="./PageOeuvrePainting">
                             <div className="departement departementEuro">
-                                Departement Euro
+                                <h3>Departement Euro</h3>
                             </div>
                         </Link>
                     </Col>
                     <Col xs="12" lg="3">
                         <Link to="/PageOeuvreInstrument">
                             <div className="departement departementInst">
-                                Departement Instru
+                                <h3>Departement Instru</h3>
                             </div>
                         </Link>
                     </Col>
