@@ -1,17 +1,19 @@
 import React from 'react';
 import axios from 'axios';
-import elementAsianArt from "./elementAsianArt.json";
+import elementsCloisters from "./elementsCloisters.json";
 import Logo from '../Logo';
 import BoutonRecharge from '../Bouton/BoutonRecharge';
+
+
 
 function entierAleatoire(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 const randomiseur = entierAleatoire(0, 9);
-const idRandomSelect = elementAsianArt[randomiseur];
+const idRandomSelect = elementsCloisters[randomiseur];
 
-class PageOeuvreAsia extends React.Component {
+class PageOeuvreCloister extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,8 +23,8 @@ class PageOeuvreAsia extends React.Component {
                 primaryImage: '',
                 objectEndDate: '',
                 classification: '',
-                artistNationality: '',
-                artistDisplayName: ''
+                artistDisplayName: '',
+                artistNationality: ''
             }
         };
         this.loadObjectID = this.loadObjectID.bind(this);
@@ -43,13 +45,14 @@ class PageOeuvreAsia extends React.Component {
                 this.setState({ informations: data });
             });
     }
-
+    
     refreshPage(){
         window.location.reload(false);
     }
 
     render() {
         const informations = this.state.informations;
+
         let ArtistName = informations.artistDisplayName
         if (ArtistName === "") {
             ArtistName = "an unknown artist"
@@ -64,8 +67,9 @@ class PageOeuvreAsia extends React.Component {
         if (classItem === '') {
             classItem = "a piece of Art"
         };
-
+        
         return (
+
             <div className="col-lg-12 col-12 lg-row sm-column justify-content-center">
                 < div className="lg-row sm-column col-sm-4 justify-content-start">
                     <Logo />
@@ -78,7 +82,7 @@ class PageOeuvreAsia extends React.Component {
                             <BoutonRecharge />
                         </div>
                     </div>
-                    <div className=" lg-row col-12 sm-column col-lg-4 justify-content-end" >
+                    <div className=" lg-row col-12 sm-column col-lg-4 justify-content-end">
                         <div className="sm-row col-12 speech-bubble">
                             <p id="description">This picture represents the {classItem} named {informations.title} which was created in {dateModel}.This is an Artwork from the Arms and armors departements and was realized by {ArtistName}.</p>
                         </div>
@@ -91,10 +95,11 @@ class PageOeuvreAsia extends React.Component {
                     </div>
                 </div>
             </div>
+
         );
     }
 
 }
 
-export default PageOeuvreAsia;
+export default PageOeuvreCloister;
 
