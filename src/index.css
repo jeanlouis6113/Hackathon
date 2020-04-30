@@ -3,6 +3,9 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
+body a {
+ text-decoration:  none ! important;
+}
 @font-face {
   font-family: TheFontGatsby;
   src: url(./Font/ParkLaneNF.ttf) format("truetype");
@@ -30,6 +33,18 @@ h1 {
   text-align: center;
   height: 78vh;
   border-radius: 20px;
+}
+.hover-departement:hover:not(departement){
+  width: 70vh;
+  height: 75vh;
+  position: relative;
+  animation: mymove 8s;
+  
+
+}
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px; }
 }
 
 .departement h3 {
