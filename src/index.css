@@ -1,13 +1,174 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./imagesSrc/Background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+body a {
+ text-decoration:  none ! important;
+}
+@font-face {
+  font-family: TheFontGatsby;
+  src: url(./Font/ParkLaneNF.ttf) format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  text-align: center;
+}
+.align {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+h1 {
+  font-family: "TheFontGatsby";
+  text-align: center;
+  font-size: 7rem !important;
+}
+.title {
+  font-size: 1.6rem;
+}
+.departement {
+  color: white;
+  text-align: center;
+  height: 78vh;
+  border-radius: 20px;
+}
+.hover-departement:hover:not(departement){
+  width: 70vh;
+  height: 75vh;
+  position: relative;
+  animation: mymove 8s;
+  
+
+}
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px; }
+}
+
+.departement h3 {
+  background-color: black;
+  border-radius: 50px;
+}
+
+.departementArms {
+  background-image: url("./imagesSrc/enteteArms.png");
+  background-position: bottom;
+}
+
+.departementAsia {
+  background-image: url("./imagesSrc/enteteAsian.jpg");
+  background-position: bottom left 840px;
+}
+
+.departementEuro {
+  background-image: url("./imagesSrc/enteteEuropeen.jpg");
+  background-position: center;
+}
+.departementInst {
+  background-image: url("./imagesSrc/enteteInstrument.jpg");
+  background-position: top;
+}
+
+#guideImage {
+  width: 22vh;
+}
+
+#artDisplayed {
+  width: 100%;
+  min-width: 280px;
+  max-width: 500px;
+  border: solid white 3px;
+}
+
+#description {
+  text-align: center;
+}
+
+/*Début bubble Codepen*/
+.speech-bubble {
+  position: relative;
+  background: white;
+  border-radius: 1em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: white;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-bottom: -20px;
+}
+
+/*Fin bubble Codepen*/
+
+.border-green {
+  border-style: solid;
+  border-color: green;
+}
+
+.border-blue {
+  border-style: solid;
+  border-color: blue;
+}
+
+.border-yellow {
+  border-style: solid;
+  border-color: yellow;
+}
+
+.border-orange {
+  border-style: solid;
+  border-color: red;
+}
+audio {
+  margin: 10px;
+  height: 20px;
+  display: none;
+}
+#settingsIcon {
+  width: 3vh;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.foote {
+  background-color: white;
+  widows: 100%;
+}
+.icone {
+  width: 6vh;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.copie {
+  float: right;
+  width: 10vh;
+  margin-top: -20px;
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 400px) {
+  #artDisplayed {
+    max-width: 280px;
+  }
+
+  .logo {
+    max-width: 350px;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .departement {
+    max-height: 50vh;
+  }
 }
