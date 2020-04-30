@@ -33,6 +33,10 @@ class PageOeuvrePainting extends React.Component {
         this.loadObjectID(idTransmis);
     }
 
+    refreshPage(){
+        window.location.reload(false);
+    }
+
 
     loadObjectID(idTransmis) {
         const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${idTransmis}`;
@@ -56,13 +60,13 @@ class PageOeuvrePainting extends React.Component {
                     <div className="col-lg-5 col-sm-12 sm-column align-items-center">
                         <h2>{informations.title}</h2>
                         <img id="artDisplayed" src={informations.primaryImage} alt="" />
-                        <div>
+                        <div onClick={this.refreshPage}>
                             <BoutonRechargePainting />
                         </div>
                     </div>
                     <div className=" lg-row col-12 sm-column col-lg-4 justify-content-end">
                         <div className="sm-row col-12 speech-bubble">
-                            <p id="description">This picture represents a {informations.classification} the {informations.title} which was created in {informations.objectEndDate}. The artist behind this creation is a {informations.artistNationality} named {informations.AlphaSort}.</p>
+                            <p id="description">This picture represents a {informations.classification} the {informations.title} which was created in {informations.objectEndDate}. The artist behind this creation is a {informations.artistNationality} named {informations.AlphaSort}.This is an Artwork from the Europeans's Painting departements</p>
                         </div>
 
                         <div className="justify-content-end">

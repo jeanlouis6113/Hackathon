@@ -23,28 +23,28 @@ export class PageDepartement extends React.Component {
                 <p class="align">The purpose of this website is to offer a free initation to art for the beginner and to extend your your knowledge about  other themes if you are already an afficionados.<br />
                 We offer you the possibility to see Artwork from our collection randomly selected in themes of your choice.</p>
                     <Row>
-                        <Col xs="12" lg="3">
-                            <Link to="/PageOeuvreArms">
+                        <Col xs="12" lg="6" xl="3">
+                            <Link to="/PageOeuvreArms"className="">
                                 <div className="departement departementArms">
                                     <h3>Departement Arms</h3>
                                 </div>
                             </Link>
                         </Col>
-                        <Col xs="12" lg="3">
+                        <Col xs="12" lg="6" xl="3">
                             <Link to="/PageOeuvreAsia">
                                 <div className="departement departementAsia">
                                     <h3>Departement Asia</h3>
                                 </div>
                             </Link>
                         </Col>
-                        <Col xs="12" lg="3">
+                        <Col xs="12" lg="6" xl="3">
                             <Link to="./PageOeuvrePainting">
                                 <div className="departement departementEuro">
                                     <h3>Departement Euro</h3>
                                 </div>
                             </Link>
                         </Col>
-                        <Col xs="12" lg="3">
+                        <Col xs="12" lg="6" xl="3">
                             <Link to="/PageOeuvreInstrument">
                                 <div className="departement departementInst">
                                     <h3>Departement Instru</h3>
