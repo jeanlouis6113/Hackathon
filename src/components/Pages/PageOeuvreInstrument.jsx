@@ -45,6 +45,10 @@ class PageOeuvreInstrument extends React.Component {
             });
     }
 
+    refreshPage(){
+        window.location.reload(false);
+    }
+
     render() {
         const informations = this.state.informations;
         return (
@@ -56,13 +60,13 @@ class PageOeuvreInstrument extends React.Component {
                     <div className="col-lg-5 col-sm-12 sm-column align-items-center">
                         <h2>{informations.title}</h2>
                         <img id="artDisplayed" src={informations.primaryImage} alt="" />
-                        <div>
+                        <div onClick={this.refreshPage}>
                             <BoutonRechargeInstrument />
                         </div>
                     </div>
                     <div className=" lg-row col-12 sm-column col-lg-4 justify-content-end" >
                         <div className="sm-row col-12 speech-bubble">
-        <p id="description">This picture represents a {informations.classification} the {informations.title} which was created in {informations.objectEndDate}. The artist behind this creation is a {informations.artistNationality} named {informations.AlphaSort}.</p>
+        <p id="description">This picture represents a {informations.classification} the {informations.title} which was created in {informations.objectEndDate}. The artist behind this creation is a {informations.artistNationality} named {informations.AlphaSort}.This is an Artwork from the music's Instrument departements</p>
                         </div>
 
                         <div className="justify-content-end">

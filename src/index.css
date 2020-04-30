@@ -5,7 +5,7 @@ body {
 }
 @font-face {
   font-family: TheFontGatsby;
-  src: url(./Font/ParkLaneNF.ttf) format('truetype');
+  src: url(./Font/ParkLaneNF.ttf) format("truetype");
 }
 
 h2 {
@@ -135,10 +135,10 @@ audio {
   margin-top: 5px;
   margin-right: 5px;
 }
-.copie{
+.copie {
   float: right;
   width: 10vh;
-  margin-top: 5px;
+  margin-top: -20px;
   margin-right: 15px;
 }
 
@@ -149,5 +149,11 @@ audio {
 
   .logo {
     max-width: 350px;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .departement {
+    max-height: 50vh;
   }
 }
