@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import elementsInstruments from "./elementsInstruments.json";
 import Logo from '../Logo';
-import BoutonRechargeInstrument from '../Bouton/BoutonRechargeInstrument';
+import BoutonRecharge from '../Bouton/BoutonRecharge';
 
 
 function entierAleatoire(min, max){
@@ -22,8 +22,7 @@ class PageOeuvreInstrument extends React.Component {
                 primaryImage: '',
                 objectEndDate:'',
                 classification: '',
-                artistNationality: 'Spanish',
-                artistAlphaSort: 'Elvis Gonzales'
+                artistDisplayName: ''
             }
         };
         this.loadObjectID = this.loadObjectID.bind(this);
@@ -51,6 +50,22 @@ class PageOeuvreInstrument extends React.Component {
 
     render() {
         const informations = this.state.informations;
+        let ArtistName = informations.artistDisplayName
+        if (ArtistName === "") {
+            ArtistName = "an unknown artist"
+        }
+        
+        let dateModel = informations.objectEndDate;
+        if (dateModel === '') {
+                dateModel = "unknown date"
+            };
+
+        let classItem = informations.classification;
+        if (classItem === '') {
+            classItem = "a piece of Art"
+        };
+        
+        
         return (
             <div className="col-lg-12 col-12 lg-row sm-column justify-content-center">
                 < div className="lg-row sm-column col-sm-4 justify-content-start">
@@ -61,12 +76,12 @@ class PageOeuvreInstrument extends React.Component {
                         <h2>{informations.title}</h2>
                         <img id="artDisplayed" src={informations.primaryImage} alt="" />
                         <div onClick={this.refreshPage}>
-                            <BoutonRechargeInstrument />
+                            <BoutonRecharge />
                         </div>
                     </div>
                     <div className=" lg-row col-12 sm-column col-lg-4 justify-content-end" >
                         <div className="sm-row col-12 speech-bubble">
-        <p id="description">This picture represents a {informations.classification} the {informations.title} which was created in {informations.objectEndDate}. The artist behind this creation is a {informations.artistNationality} named {informations.AlphaSort}.This is an Artwork from the music's Instrument departements</p>
+        <p id="description">This picture represents the {classItem} named {informations.title} which was created in {dateModel}.This is an Artwork from the Arms and armors departements and was realized by {ArtistName}.</p>
                         </div>
 
                         <div className="justify-content-end">

@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import elementArms from "./elementArms.json";
 import Logo from '../Logo';
-import BoutonRechargeArm from '../Bouton/BoutonRechargeArm';
+import BoutonRecharge from '../Bouton/BoutonRecharge';
 
 
 
@@ -23,7 +23,8 @@ class PageOeuvreArm extends React.Component {
                 primaryImage: '',
                 objectEndDate: '',
                 classification: '',
-                artistNationality: 'American'
+                artistDisplayName: '',
+                artistNationality: ''
             }
         };
         this.loadObjectID = this.loadObjectID.bind(this);
@@ -51,6 +52,23 @@ class PageOeuvreArm extends React.Component {
 
     render() {
         const informations = this.state.informations;
+        
+        let ArtistName = informations.artistDisplayName
+        if (ArtistName === "") {
+            ArtistName = "an unknown artist"
+        }
+        
+        let dateModel = informations.objectEndDate;
+        if (dateModel === '') {
+                dateModel = "unknown date"
+            };
+
+        let classItem = informations.classification;
+        if (classItem === '') {
+            classItem = "a piece of Art"
+        };
+        
+        
         return (
 
             <div className="col-lg-12 col-12 lg-row sm-column justify-content-center">
@@ -60,14 +78,16 @@ class PageOeuvreArm extends React.Component {
                 <div className="col-lg-12 col-12 flex-column flex-lg-row d-flex justify-content-between">
                     <div className="col-lg-5 col-sm-12 sm-column align-items-center">
                         <h2>{informations.title}</h2>
-                        <img id="artDisplayed" src={informations.primaryImage} alt="" />
+                        <div>
+                            <img id="artDisplayed" src={informations.primaryImage} alt="" />
+                        </div>
                         <div onClick={this.refreshPage}>
-                            <BoutonRechargeArm />
+                            <BoutonRecharge />
                         </div>
                     </div>
                     <div className=" lg-row col-12 sm-column col-lg-4 justify-content-end">
                         <div className="sm-row col-12 speech-bubble">
-                            <p id="description">This picture represents a {informations.classification} the {informations.title} which was created in {informations.objectEndDate}.This is an Artwork from the Arms and armors departements</p>
+                            <p id="description">This picture represents the {classItem} named {informations.title} which was created in {dateModel}.This is an Artwork from the Arms and armors departements and was realized by {ArtistName}.</p>
                         </div>
 
                         <div className="justify-content-end">

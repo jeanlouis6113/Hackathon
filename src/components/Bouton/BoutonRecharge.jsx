@@ -1,7 +1,7 @@
 import React from 'react';
 import './BoutonRetour.scss';
 
-function BoutonRechargeAsia() {
+function BoutonRecharge() {
     
     return (
     <div className="wrapper-button">
@@ -10,4 +10,4 @@ function BoutonRechargeAsia() {
     )
 }
 
-export default BoutonRechargeAsia;
+export default BoutonRecharge;
